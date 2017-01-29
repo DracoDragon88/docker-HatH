@@ -5,9 +5,9 @@ MAINTAINER Draco Dragon
 RUN apk --no-cache add curl sqlite unzip
 
 # Common
-ENV HatH_VERSION 1.4.0
+ENV HatH_VERSION 1.4.1
 ENV HatH_DOWNLOAD_URL https://repo.e-hentai.org/hath/HentaiAtHome_$HatH_VERSION.zip
-ENV HatH_DOWNLOAD_SHA256 830344e1686f23aebafcc57977d9dfcb8ad05c80f367a7dd359e1c4eeba64c57
+ENV HatH_DOWNLOAD_SHA256 811f31bd8472ca1f63b7e1cbb47c8f10185a613c1373004882af30fb8597d656
 ENV HatH_USER hath
 ENV HatH_PATH "/home/$HatH_USER/client"
 ENV HatH_ARCHIVE hath.zip
