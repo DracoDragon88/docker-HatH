@@ -1,5 +1,5 @@
 FROM anapsix/alpine-java:7
-MAINTAINER Draco Dragon
+MAINTAINER DracoDragon88
 
 # Install dependencies 
 RUN apk --no-cache add curl sqlite unzip
