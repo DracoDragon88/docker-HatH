@@ -13,7 +13,7 @@ ENV HatH_PATH "/home/$HatH_USER/client"
 ENV HatH_ARCHIVE hath.zip
 ENV HatH_PORT 4915
 ENV HatH_JAR HentaiAtHome.jar
-ENV HatH_ARGS --disable_logging --port "$HatH_PORT"
+ENV HatH_ARGS --use_more_memory --disable_logging --port "$HatH_PORT"
 
 # Container Setup
 RUN adduser -D "$HatH_USER" && \
