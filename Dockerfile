@@ -24,7 +24,7 @@ RUN adduser -D "$HatH_USER" && \
     unzip "$HatH_ARCHIVE" && \
     rm "$HatH_ARCHIVE"
 
-RUN mkdir -p "$HatH_PATH/cache" "$HatH_PATH/data" "$HatH_PATH/downloaded" "$HatH_PATH/hathdl" "$HatH_PATH/tmp"
+RUN mkdir -p "$HatH_PATH/cache" "$HatH_PATH/data" "$HatH_PATH/download" "$HatH_PATH/hathdl" "$HatH_PATH/tmp"
 
 COPY client/ "$HatH_PATH/"
 
@@ -34,6 +34,6 @@ WORKDIR "$HatH_PATH"
 # Expose the port
 EXPOSE "$HatH_PORT"
 
-VOLUME ["$HatH_PATH/cache", "$HatH_PATH/data", "$HatH_PATH/downloaded", "$HatH_PATH/hathdl"]
+VOLUME ["$HatH_PATH/cache", "$HatH_PATH/data", "$HatH_PATH/download", "$HatH_PATH/hathdl"]
 
 CMD java -jar "$HatH_JAR" "$HatH_ARGS"
