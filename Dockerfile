@@ -5,7 +5,7 @@ MAINTAINER DracoDragon88
 RUN apk --no-cache add curl sqlite unzip
 
 # Common
-ENV HatH_VERSION 1.4.1
+ENV HatH_VERSION 1.4.2
 ENV HatH_DOWNLOAD_URL https://repo.e-hentai.org/hath/HentaiAtHome_$HatH_VERSION.zip
 ENV HatH_DOWNLOAD_SHA256 811f31bd8472ca1f63b7e1cbb47c8f10185a613c1373004882af30fb8597d656
 ENV HatH_USER hath
