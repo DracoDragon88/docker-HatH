@@ -1,4 +1,9 @@
-H@H Docker by avluis
-Updated by DracoDragon88
+H@H Docker by DracoDragon88
 
-VIP
+Hentai@Home v1.4.2
+
+--
+
+HatH_PORT 4915 (Can be change in startup line)
+WORKDIR "/home/$HatH_USER/client"
+CMD java -jar "$HatH_JAR" "$HatH_ARGS" --port "$HatH_PORT"
