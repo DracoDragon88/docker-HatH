@@ -1,4 +1,4 @@
-FROM anapsix/alpine-java:7
+FROM anapsix/alpine-java:8
 MAINTAINER DracoDragon88
 
 # Install dependencies 
