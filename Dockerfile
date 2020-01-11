@@ -18,7 +18,6 @@ ENV HatH_ARGS -Xms16m -Xmx512m --silentstart
 # Container Setup
 RUN adduser -D "$HatH_USER" && \
     mkdir "$HatH_PATH" && \
-    mkdir "/home/$HatH_USER/client2" && \
     cd "$HatH_PATH" && \
     curl -fsSL "$HatH_DOWNLOAD_URL" -o "$HatH_ARCHIVE" && \
     echo -n ""$HatH_DOWNLOAD_SHA256"  "$HatH_ARCHIVE"" | sha256sum -c && \
@@ -30,7 +29,7 @@ RUN mkdir -p "$HatH_PATH/cache" "$HatH_PATH/data" "$HatH_PATH/download" "$HatH_P
 COPY client/ "$HatH_PATH/"
 
 RUN chmod -R 775 "$HatH_PATH"
-WORKDIR "/home/$HatH_USER/client2"
+WORKDIR "$HatH_PATH"
 
 # Expose the port
 EXPOSE "$HatH_PORT"
