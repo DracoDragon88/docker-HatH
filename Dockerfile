@@ -1,13 +1,12 @@
 FROM anapsix/alpine-java:8
-MAINTAINER DracoDragon88
 
 # Install dependencies 
 RUN apk --no-cache add curl sqlite unzip
 
 # Common
-ENV HatH_VERSION 1.6.0
+ENV HatH_VERSION 1.6.1
 ENV HatH_DOWNLOAD_URL https://repo.e-hentai.org/hath/HentaiAtHome_$HatH_VERSION.zip
-ENV HatH_DOWNLOAD_SHA256 597f0ae2d114a86e021013b0146d59b1f2f8be2025bfae6b38c181515b795018
+ENV HatH_DOWNLOAD_SHA256 b8889b2c35593004be061064fcb6d690ff8cbda9564d89f706f7e3ceaf828726
 ENV HatH_USER hath
 ENV HatH_PATH "/home/$HatH_USER/client"
 ENV HatH_ARCHIVE hath.zip
